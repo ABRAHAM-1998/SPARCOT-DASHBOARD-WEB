@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.active-list-item {
+  color: #3F51B5 !important;
+  border-left:4px solid blue;
+}
+
+.app-sidenav {
+  min-width: 200px;
+  max-width: 200px;
+}
+
+.app-content {
+  padding: 2%;
+}
+
+
+.mat-list-item{
+  max-height: 45px;
+ height: 45px ;
+}

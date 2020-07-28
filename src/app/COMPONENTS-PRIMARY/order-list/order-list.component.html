@@ -1,0 +1,32 @@
+<div class="example-container mat-elevation-z8 " >
+  <mat-table #table [dataSource]="datalistobj">
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+      <td mat-cell *matCellDef="let element;let i=index"> {{i+1}} </td>
+  </ng-container>
+    <ng-container matColumnDef="strOrderId">
+      <mat-header-cell *matHeaderCellDef> Order  ID </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.strOrderId}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="strUserType">
+      <mat-header-cell *matHeaderCellDef> User Type </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.strUserType}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="strModePayment">
+      <mat-header-cell *matHeaderCellDef> Mode of payment </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.strModePayment}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="strOrderStatus">
+      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.strOrderStatus}} </mat-cell> 
+    </ng-container>
+
+    <ng-container matColumnDef="dblTotalOrderAmount">
+      <mat-header-cell *matHeaderCellDef> Total Order Amount </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.dblTotalOrderAmount}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

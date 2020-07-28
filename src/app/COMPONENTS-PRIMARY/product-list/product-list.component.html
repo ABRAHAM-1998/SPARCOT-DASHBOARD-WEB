@@ -1,0 +1,36 @@
+<div class="example-container mat-elevation-z8   " >
+    <mat-table #table [dataSource]="datalistobj">
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+        <td mat-cell *matCellDef="let element;let i=index"> {{i+1}} </td>
+    </ng-container>
+      <ng-container matColumnDef="strName">
+        <mat-header-cell *matHeaderCellDef> PRODUCT NAME </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.strName}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="strProductId">
+        <mat-header-cell *matHeaderCellDef> PRODUCT ID </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.strProductId}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="dblMRP">
+        <mat-header-cell *matHeaderCellDef> PRODUCT MRP </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.dblMRP}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="dblSellingPrice">
+        <mat-header-cell *matHeaderCellDef> SELLING PRICE </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.dblSellingPrice}} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="dblRetailerPrice">
+        <mat-header-cell *matHeaderCellDef> RETAIL PRICE </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.dblRetailerPrice}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="strImageUrl">
+        <mat-header-cell *matHeaderCellDef> IMAGES </mat-header-cell>
+        <mat-cell *matCellDef="let element"> <img style="width: 28px;" src="{{element.strImageUrl}}" alt=""> </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
